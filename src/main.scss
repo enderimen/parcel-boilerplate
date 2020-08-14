@@ -1,0 +1,38 @@
+@import "./variables.scss";
+
+:root {
+  --main-text-color: #000;
+}
+
+body {
+  background-color: #9649CB;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+h1 {
+  color: #EFEA5A;
+  font-size: $large;
+  transition: ease-in color .3s;
+  animation: fade 3s infinite;
+  &:hover {
+    color: var(--main-text-color);
+  }
+}
+
+@keyframes fade {
+  0% {
+    opacity: 1;
+  }
+
+  50% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
